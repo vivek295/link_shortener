@@ -1,0 +1,18 @@
+<% provide(:title, 'Create short URL') %>
+<div class="container top-margin">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="fa fa-link"></span> Create</div>
+          <div class="panel-body">
+            <%= form_tag "/links" do %>
+              <%= text_field_tag "original_url", "", placeholder: 'enter url', class: 'form-control' %>
+              <%= submit_tag "Generate", class: 'btn btn-success btn-sm' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

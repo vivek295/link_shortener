@@ -1,0 +1,22 @@
+<% provide(:title, 'Short URL created') %>
+<div class="container top-margin">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="fa fa-link"></span> Created Short URL</div>
+          <div class="panel-body">
+           
+            <div style="float: left;">
+              <td><%= @link.original_url %></td>
+            </div>
+            <div style="float: right;">
+            <td><a href="<%= @link.original_url %>" target="_blank"><%= @link.short_url %> </a></td>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
