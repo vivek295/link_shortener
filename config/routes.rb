@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :links
+  resources :links, except: [:show]
+  get '/:short_url', to: 'links#show'
   root 'links#index'
 end

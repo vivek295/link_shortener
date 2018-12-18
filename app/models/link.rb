@@ -7,7 +7,7 @@ class Link < ActivePStore::Base
     if (link = Link.find_by(trimmed_url: self.trimmed_url))
       self.short_url = link.short_url
     else
-      self.short_url = "z.go/" + Base64.encode64(self.trimmed_url)[0..6]
+      self.short_url = Base64.encode64(self.trimmed_url)[0..6]
       self.save
     end
   end

@@ -19,6 +19,13 @@ class LinksController < ApplicationController
     end
   end
 
+  def show
+    @link = Link.find_by(short_url: params[:short_url])
+    if @link
+      redirect_to @link.original_url
+    end
+  end
+
   def index
     @links = Link.all
   end
