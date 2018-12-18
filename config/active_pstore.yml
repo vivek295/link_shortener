@@ -13,7 +13,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/links.yml
+  database: db/links_test.yml
 
 production:
   <<: *default
